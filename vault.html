@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vault.js" defer></script>
+    <title>vault workshop</title>
+</head>
+
+
+<!-- everything below was used from google for a fun feature  -->
+<body>
+    <h1 style="text-align: center;">Vault Workshop</h1>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Interactive Lock</title>
+    <style>
+    .lock-container {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    }
+    
+   
+    .lock-icon {
+    font-size: 40px;
+    }
+    
+   
+    .locked {
+    color: red;
+    }
+    
+   
+    .unlocked {
+    color: green;
+    }
+    </style>
+    </head>
+    <body>
+    
+   
+    <div class="lock-container" onclick="toggleLock()">
+    <span id="lockIcon" class="lock-icon locked">&#x1F512;</span>
+    </div>
+    
+   
+    <script>
+    function toggleLock() {
+    const lockIcon = document.getElementById('lockIcon');
+    if (lockIcon.classList.contains('locked')) {
+    lockIcon.classList.remove('locked');
+    lockIcon.classList.add('unlocked');
+    lockIcon.innerHTML = '&#x1F513;';
+    } else {
+    lockIcon.classList.remove('unlocked');
+    lockIcon.classList.add('locked');
+    lockIcon.innerHTML = '&#x1F512;';
+    }
+    }
+    </script>
+    
+   
+    </body>
+    </html>
+</body>
+</html>
